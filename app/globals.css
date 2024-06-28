@@ -6,6 +6,12 @@ h2 {
     color: #797676;
 }
 
+.words {
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .button {
     width: 50px;
     height: 50px;
@@ -268,8 +274,10 @@ h2 {
         line-height: 2;
     }
     .words {
-        margin-left: 100px;
-        margin-top: 5px;
+        top: 25px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
     }
     .inputb {
         display: flex;
@@ -284,10 +292,11 @@ h2 {
 
 @media (min-width: 500px) {
     .words {
-        margin-top: 5px;
-        margin-left: 15vw;
-        align-items: center;
-        justify-content: center;
+        top: 25px;
+
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
     }
     .loader {
         position: relative;
@@ -323,10 +332,11 @@ h2 {
         transform: translate(-50%, -50%);
     }
     .words {
-        margin-top: 5px;
-        margin-left: 19vw;
-        align-items: center;
-        justify-content: center;
+        top: 25px;
+
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
     }
     .loader {
         position: relative;
