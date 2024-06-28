@@ -178,7 +178,7 @@ h2 {
     display: block;
     height: 100%;
     padding-left: 6px;
-    color: #956afa;
+    color: #000000;
     animation: spin_4991 4s infinite;
 }
 
@@ -269,6 +269,7 @@ h2 {
     }
     .words {
         margin-left: 100px;
+        margin-top: 5px;
     }
     .inputb {
         display: flex;

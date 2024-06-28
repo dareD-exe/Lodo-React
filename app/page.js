@@ -97,11 +97,11 @@ const page = () => {
                 <div className="loader flex">
                     <img className="logo absolute" src="./favicon.ico" alt="" />
                     <div className="words">
-                        <span class="word">MURTUJA</span>
-                        <span class="word">Todo List</span>
-                        <span class="word">MURTUJA</span>
-                        <span class="word">Todo List</span>
-                        <span class="word">MURTUJA</span>
+                        <span className="word">MURTUJA</span>
+                        <span className="word">Todo List</span>
+                        <span className="word">MURTUJA</span>
+                        <span className="word">Todo List</span>
+                        <span className="word">MURTUJA</span>
                     </div>
                 </div>
             </div>
