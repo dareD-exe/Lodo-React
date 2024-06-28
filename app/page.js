@@ -93,14 +93,22 @@ const page = () => {
 
     return (
         <>
-            <div className="logo text-6xl items-center text-center bg-black py-5 px-5">
-                <img className=" absolute" src="./favicon.ico" alt="" />
-                <h1 className="banner text-white">MURTUJA | Todo list</h1>
+            <div className="card">
+                <div className="loader flex">
+                    <img className="logo absolute" src="./favicon.ico" alt="" />
+                    <div className="words">
+                        <span class="word">MURTUJA</span>
+                        <span class="word">Todo List</span>
+                        <span class="word">MURTUJA</span>
+                        <span class="word">Todo List</span>
+                        <span class="word">MURTUJA</span>
+                    </div>
+                </div>
             </div>
-            <form className=" text-center" onSubmit={submitHandler}>
+            <form className="main-input text-center" onSubmit={submitHandler}>
                 <input
                     type="text"
-                    className="ititle text-3xl border-4 m-8 border-zinc-800 py-2 px-4"
+                    className="input text-3xl mb-8 m-4 border-zinc-800 py-2 px-4"
                     placeholder="Enter Title here"
                     value={title}
                     onChange={(e) => {
@@ -110,7 +118,7 @@ const page = () => {
 
                 <input
                     type="text"
-                    className="idesc text-3xl border-4 m-8 border-zinc-800 py-3 px-4"
+                    className="input text-3xl  mb-8 m-4 border-zinc-800 py-3 px-4"
                     placeholder="Enter Description here"
                     value={desc}
                     onChange={(e) => {
@@ -118,12 +126,17 @@ const page = () => {
                     }}
                 />
 
-                <button className="btn text-3xl bottom-4 font-bold py-3 px-4 m-8 bg-black text-white  text-center">
-                    <i class="ri-add-large-fill"></i>
+                <button className="bookmarkBtn">
+                    <span class="IconContainer">
+                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                        </svg>
+                    </span>
+                    <p class="text">Save</p>
                 </button>
             </form>
             <hr />
-            <div className="result p-5 bg-slate-200">
+            <div className="result p-5 bg-[#ece7e7af] rounded-lg">
                 <ul>{renderTask}</ul>
             </div>
         </>

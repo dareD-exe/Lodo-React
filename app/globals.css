@@ -2,54 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.logo img {
-    height: 50px;
-    width: 50px;
-}
-
-@media (max-width: 400px) {
-    .title {
-        width: 300px;
-    }
-
-    .ititle,
-    .idesc {
-        width: 94vw;
-        line-height: 6px;
-        margin: 10px;
-        font-size: 7vw;
-        padding: 5px;
-    }
-    .desc {
-        width: 75vw;
-    }
-
-    .button {
-        height: 50px;
-        width: 50px;
-    }
-    .btn {
-        width: 94vw;
-        height: 55px;
-        line-height: 6px;
-        margin: 10px;
-        font-size: 7vw;
-        padding: 5px;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        height: 80px;
-        text-align: center;
-        justify-content: center;
-        line-height: 2;
-    }
-
-    .inputb {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+h2 {
+    color: #797676;
 }
 
 .button {
@@ -93,4 +47,298 @@
 .button:hover .bin-top {
     transition-duration: 0.5s;
     transform: rotate(160deg);
+}
+
+.bookmarkBtn {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(238, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.IconContainer {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(
+        to bottom,
+        rgb(255, 136, 255),
+        rgb(172, 70, 255)
+    );
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4d4c4c;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+    width: 90px;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: 0.3s;
+}
+
+.input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5, -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+.input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+.card {
+    /* color used to softly clip top and bottom of the .words container */
+    --bg-color: white;
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    z-index: 99;
+}
+
+.logo {
+    z-index: 999;
+}
+
+.loader {
+    color: rgb(124, 124, 124);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+}
+.words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        var(--bg-color) 10%,
+        transparent 30%,
+        transparent 70%,
+        var(--bg-color) 90%
+    );
+    z-index: 20;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #956afa;
+    animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+    10% {
+        -webkit-transform: translateY(-102%);
+        transform: translateY(-102%);
+    }
+
+    25% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    35% {
+        -webkit-transform: translateY(-202%);
+        transform: translateY(-202%);
+    }
+
+    50% {
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+    }
+
+    60% {
+        -webkit-transform: translateY(-302%);
+        transform: translateY(-302%);
+    }
+
+    75% {
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+    }
+
+    85% {
+        -webkit-transform: translateY(-402%);
+        transform: translateY(-402%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-400%);
+        transform: translateY(-400%);
+    }
+}
+
+@media (max-width: 499px) {
+    .title {
+        width: 300px;
+    }
+
+    .input {
+        width: 94vw;
+        line-height: 6px;
+        margin: 10px;
+        font-size: 7vw;
+        padding: 5px;
+    }
+    .desc {
+        width: 75vw;
+    }
+
+    .button {
+        height: 50px;
+        width: 50px;
+    }
+    .btn {
+        width: 94vw;
+        height: 55px;
+        line-height: 6px;
+        margin: 10px;
+        font-size: 7vw;
+        padding: 5px;
+    }
+
+    .bookmarkBtn {
+        margin-top: 30px;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo {
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        line-height: 2;
+    }
+    .words {
+        margin-left: 100px;
+    }
+    .inputb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        z-index: 9999;
+    }
+}
+
+@media (min-width: 500px) {
+    .words {
+        margin-top: 5px;
+        margin-left: 15vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader {
+        position: relative;
+        display: flex;
+    }
+    .logo {
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .card {
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .bookmarkBtn {
+        margin-top: 10px;
+
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1000px) {
+    .bookmarkBtn {
+        margin-top: 10px;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .words {
+        margin-top: 5px;
+        margin-left: 19vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader {
+        position: relative;
+        display: flex;
+    }
+    .logo {
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .card {
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
 }
